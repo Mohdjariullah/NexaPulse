@@ -297,7 +297,7 @@
             <div class="col-sm-2">
                 <h5>Partner</h5>
                 <ul class="list-unstyled">
-                    <li><a href="#">Refer a friend</a></li>
+                    <li><a href="#" id="referAFriendButton">Refer a friend</a></li>
                     <li><a href="#">Affiliates</a></li>
                 </ul>
             </div>
@@ -311,7 +311,7 @@
         </div>
         <div class="row mt-5">
             <div class="col-12 text-muted text-center small-xl">
-                &copy; 2023 <a href="https://pixlbuilders.tech/">PixlBuilders</a> - All Rights Reserved
+                &copy; 2023 <a href="https://pixlbuilders.tech/" style="color: #ff1744;">PixlBuilders</a> - All Rights Reserved
             </div>
         </div>
     </div>
@@ -321,7 +321,24 @@
 <div class="scroll-top">
     <i class="fa fa-angle-up" aria-hidden="true"></i>
 </div>
+<script>
+    function copyToClipboard(url) {
+    const dummy = document.createElement("textarea");
+    document.body.appendChild(dummy);
+    dummy.value = url;
+    dummy.select();
+    document.execCommand("copy");
+    document.body.removeChild(dummy);
+}
 
+function handleClick() {
+    const url = window.location.href;
+    copyToClipboard(url);
+    alert("Link Copied to Clipboard, Share this Awesome Website");
+}
+
+document.getElementById("referAFriendButton").addEventListener("click", handleClick);
+</script>
 
 
 <!-- jQuery first, then Popper.js, then Bootstrap JS -->
