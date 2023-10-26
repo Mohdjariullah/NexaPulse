@@ -1,6 +1,7 @@
 import './App.css';
 import {BrowserRouter as Router, Routes, Route} from 'react-router-dom'
 import Login from './pages/LoginPage';
+import Sucess from './pages/SucessPage';
 function App() {
   return (
     <>
